@@ -1,0 +1,32 @@
+/* series index
+----------------------------------------------- */
+table.azrcrv-si{
+	border: 2px solid #007FFF;
+	margin: auto;
+}
+th.azrcrv-si{
+	color: #FFF;
+	background: #007FFF;
+	font-weight: 900;
+	padding: 6px;
+}
+td.azrcrv-si{
+	padding: 4px;
+	border-bottom: 1px solid #007FFF;
+}
+a.azrcrv-si-link,
+a.azrcrv-si-link:link,
+a.azrcrv-si-link:visited{
+	color: #FFF;
+	text-decoration: none;
+}
+a.azrcrv-si-link:hover{
+	text-decoration: underline;
+}
+a.azrcrv-si-index{
+	font-weight: 800;
+	padding-left: 12px;
+}
+span.azrcrv-si-index{
+	padding-left: 12px;
+}

@@ -1,0 +1,184 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Series Index\n"
+"POT-Creation-Date: 2019-02-24 18:36+0000\n"
+"PO-Revision-Date: 2019-02-24 18:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: https://translate.azurecurve.co.uk/\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: azrcrv-series-index.php\n"
+
+#: azrcrv-series-index.php:188
+msgid "Settings"
+msgstr ""
+
+#: azrcrv-series-index.php:205
+msgid "Series Index Settings"
+msgstr ""
+
+#: azrcrv-series-index.php:206
+msgid "Series Index"
+msgstr ""
+
+#: azrcrv-series-index.php:220
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: azrcrv-series-index.php:231
+msgid "Settings have been saved."
+msgstr ""
+
+#: azrcrv-series-index.php:242
+msgid "When creating a series of posts there are two custom fields required:"
+msgstr ""
+
+#: azrcrv-series-index.php:245
+msgid "This is the title of the series."
+msgstr ""
+
+#: azrcrv-series-index.php:248
+#, php-format
+msgid ""
+"Place the %1$s shortcode in the post where the index should be displayed. "
+"The series index to be displayed is automatically derived from the %2$s "
+"custom field. The shortcode can be used in any post or page if the title "
+"parameter is used (see below)."
+msgstr ""
+
+#: azrcrv-series-index.php:250
+msgid ""
+"There are four optional parameters which can be used for the series-index "
+"shortcode:"
+msgstr ""
+
+#: azrcrv-series-index.php:252
+msgid ""
+"only required if the series index is not being displayed in a post (or a "
+"page) within the series; set it to the title of the required series."
+msgstr ""
+
+#: azrcrv-series-index.php:253
+msgid ""
+"only required if the series title in the post name differs from the "
+"<strong>Series</strong> custom field."
+msgstr ""
+
+#: azrcrv-series-index.php:254
+msgid ""
+"only required if the series index should have a different width to the "
+"default specified in the settings."
+msgstr ""
+
+#: azrcrv-series-index.php:263
+#, php-format
+msgid ""
+"enables the show/hide toggle; 1 shows, 0 hides as start position. Requires %s"
+msgstr ""
+
+#: azrcrv-series-index.php:264
+msgid ""
+"only required to override the default toggle heading of \"Click to show/hide "
+"<series title> Series Index\"."
+msgstr ""
+
+#: azrcrv-series-index.php:268
+msgid "all standard attributes"
+msgstr ""
+
+#: azrcrv-series-index.php:277
+msgid "Index Width"
+msgstr ""
+
+#: azrcrv-series-index.php:279
+#, php-format
+msgid "Specify the width of the index; e.g. 75% or 500px"
+msgstr ""
+
+#: azrcrv-series-index.php:282 azrcrv-series-index.php:283
+msgid "Toggle Default"
+msgstr ""
+
+#: azrcrv-series-index.php:284
+msgid "Show/Hide Toggle default enabled?"
+msgstr ""
+
+#: azrcrv-series-index.php:288
+msgid "Title Separator"
+msgstr ""
+
+#: azrcrv-series-index.php:289
+msgid "Space before title separator?"
+msgstr ""
+
+#: azrcrv-series-index.php:290
+msgid "Space before?"
+msgstr ""
+
+#: azrcrv-series-index.php:291
+msgid "Space after title separator?"
+msgstr ""
+
+#: azrcrv-series-index.php:292
+msgid "Space after?"
+msgstr ""
+
+#: azrcrv-series-index.php:294
+msgid ""
+"If your series title is included in the post title specify the separator and "
+"surrounding spaces. e.g. <strong>Installing Microsoft Dynamics GP 2013 R2: "
+"Introduction</strong> has a separator of <strong>:</strong> with a following "
+"space so the <strong>Space before?</strong> checkbox should be unmarked, "
+"<strong>:</strong> entered in the text box and the <strong>Space after?</"
+"strong> checkbox marked."
+msgstr ""
+
+#: azrcrv-series-index.php:297
+msgid "Start/End Index"
+msgstr ""
+
+#: azrcrv-series-index.php:303 azrcrv-series-index.php:304
+msgid "Enable Header Row"
+msgstr ""
+
+#: azrcrv-series-index.php:305
+msgid "Display header row?"
+msgstr ""
+
+#: azrcrv-series-index.php:309 azrcrv-series-index.php:310
+msgid "Enable Header Link"
+msgstr ""
+
+#: azrcrv-series-index.php:311
+msgid "Enable header link back to series index?"
+msgstr ""
+
+#: azrcrv-series-index.php:315
+msgid "Start/End Header Row"
+msgstr ""
+
+#: azrcrv-series-index.php:320
+msgid "Start/End Detail Row"
+msgstr ""
+
+#: azrcrv-series-index.php:326
+msgid "Start/End Current Row"
+msgstr ""
+
+#: azrcrv-series-index.php:329
+msgid "The current post can be formatted differently to the other detail rows."
+msgstr ""
+
+#: azrcrv-series-index.php:349
+msgid "You do not have permissions to perform this action"
+msgstr ""
+
+#: azrcrv-series-index.php:668
+msgid "Click to show/hide the Index of Series"
+msgstr ""
