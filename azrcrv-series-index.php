@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Series Index
  * Description: Displays Index of Series Posts using series-index Shortcode. This plugin is multi-site compatible, contains an inbuilt show/hide toggle and supports localisation..
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/series-index
@@ -24,6 +24,10 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname(__FILE__).'/pluginmenu/menu.php');
+register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_si');
+
+// include update client
+require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
 
 /**
  * Setup registration activation hook, actions, filters and shortcodes.
@@ -39,6 +43,7 @@ add_action('admin_menu', 'azrcrv_si_create_admin_menu');
 add_action('admin_post_azrcrv_si_save_options', 'azrcrv_si_save_options');
 add_action('wp_enqueue_scripts', 'azrcrv_si_load_css');
 //add_action('the_posts', 'azrcrv_si_check_for_shortcode');
+add_action('plugins_loaded', 'azrcrv_si_load_languages');
 
 // add filters
 add_filter('plugin_action_links', 'azrcrv_si_add_plugin_action_link', 10, 2);
@@ -47,6 +52,17 @@ add_filter('plugin_action_links', 'azrcrv_si_add_plugin_action_link', 10, 2);
 add_shortcode('series-index', 'azrcrv_si_display_series_index');
 add_shortcode('index-of-series', 'azrcrv_si_display_index_of_series');
 add_shortcode('series-index-link', 'azrcrv_si_display_series_index_link');
+
+/**
+ * Load language files.
+ *
+ * @since 1.0.0
+ *
+ */
+function azrcrv_si_load_languages() {
+    $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
+    load_plugin_textdomain('azrcrv-si', false, $plugin_rel_path);
+}
 
 /**
  * Check if shortcode on page.
@@ -229,7 +245,7 @@ function azrcrv_si_display_options(){
 	?>
 	<div id="azrcrv-si-general" class="wrap">
 		<fieldset>
-			<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+			<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 			<?php if(isset($_GET['settings-updated'])){ ?>
 				<div class="notice notice-success is-dismissible">
 					<p><strong><?php esc_html_e('Settings have been saved.', 'series-index'); ?></strong></p>
