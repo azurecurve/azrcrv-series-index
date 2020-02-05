@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Series Index
  * Description: Displays Index of Series Posts using series-index Shortcode. This plugin is multi-site compatible, contains an inbuilt show/hide toggle and supports localisation..
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/series-index
@@ -539,7 +539,6 @@ function azrcrv_si_get_allowed_tags() {
 		$series_title = $title;
 	}
 	$clean_series_title = sanitize_text_field(addslashes($series_title));
-	$clean_replace = sanitize_text_field(addslashes($replace));
 	$post = get_post($post_id); 
 	$slug = $post->post_name;
 	
@@ -552,9 +551,8 @@ function azrcrv_si_get_allowed_tags() {
 		$title_separator .= ' ';
 	}
 	
-	$SQL = "SELECT p.ID AS ID,p.post_name AS post_name, p.post_title AS post_title, YEAR(post_date) AS PostYear, DATE_FORMAT(post_date, '%m') AS PostMonth FROM `".$wpdb->prefix."posts` p INNER JOIN `".$wpdb->prefix."postmeta` pm ON pm.post_id = p.id AND pm.meta_key = 'SERIES' AND pm.meta_value = '".$clean_series_title."' INNER JOIN `".$wpdb->prefix."postmeta` pmsp ON pmsp.post_id = p.id AND pmsp.meta_value <> '0' AND (pmsp.meta_key = 'SERIES POSITION' or pmsp.meta_key = 'SERIES POS') WHERE p.post_status = 'publish' ORDER BY CONVERT(pmsp.meta_value, UNSIGNED INTEGER)";
+	$SQL = $wpdb->prepare("SELECT p.ID AS ID,p.post_name AS post_name, p.post_title AS post_title, YEAR(post_date) AS PostYear, DATE_FORMAT(post_date, '%m') AS PostMonth FROM `".$wpdb->prefix."posts` p INNER JOIN `".$wpdb->prefix."postmeta` pm ON pm.post_id = p.id AND pm.meta_key = 'SERIES' AND pm.meta_value = '%s' INNER JOIN `".$wpdb->prefix."postmeta` pmsp ON pmsp.post_id = p.id AND pmsp.meta_value <> '0' AND (pmsp.meta_key = 'SERIES POSITION' or pmsp.meta_key = 'SERIES POS') WHERE p.post_status = 'publish' ORDER BY CONVERT(pmsp.meta_value, UNSIGNED INTEGER)", stripslashes($clean_series_title));
 	$myrows = $wpdb->get_results($SQL);
-	//echo $SQL;
 	
 	$rows = '';
 	foreach ($myrows as $myrow){
@@ -573,10 +571,9 @@ function azrcrv_si_get_allowed_tags() {
 	$header = '';
 	if ($options['enable_header'] == 1){
 		if ($options['enable_header_link'] == 1){
-			$SQL = $wpdb->prepare("SELECT p.ID AS ID,DATE_FORMAT(post_date, '%Y/%m') as post_date, p.post_name FROM `".$wpdb->prefix."posts` p INNER JOIN `".$wpdb->prefix."postmeta` pm ON pm.post_id = p.id AND pm.meta_key = 'SERIES' AND pm.meta_value = '%s' INNER JOIN `".$wpdb->prefix."postmeta`  pmsp ON pmsp.post_id = p.id AND pmsp.meta_value = '0' AND (pmsp.meta_key = 'SERIES POSITION' or pmsp.meta_key = 'SERIES POS') ORDER BY CONVERT(pmsp.meta_value, UNSIGNED INTEGER) LIMIT 0,1", $clean_series_title);
+			$SQL = $wpdb->prepare("SELECT p.ID AS ID,DATE_FORMAT(post_date, '%Y/%m') as post_date, p.post_name FROM `".$wpdb->prefix."posts` p INNER JOIN `".$wpdb->prefix."postmeta` pm ON pm.post_id = p.id AND pm.meta_key = 'SERIES' AND pm.meta_value = '%s' INNER JOIN `".$wpdb->prefix."postmeta`  pmsp ON pmsp.post_id = p.id AND pmsp.meta_value = '0' AND (pmsp.meta_key = 'SERIES POSITION' or pmsp.meta_key = 'SERIES POS') ORDER BY CONVERT(pmsp.meta_value, UNSIGNED INTEGER) LIMIT 0,1", stripslashes($clean_series_title));
 			
 			$myrows = $wpdb->get_results($SQL);
-			//echo $SQL;
 			
 			$series_title_link = '';
 			foreach ($myrows as $myrow){
