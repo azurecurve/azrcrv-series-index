@@ -56,7 +56,7 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 # Changelog
 
 ### [Version 1.1.2](https://github.com/azurecurve/azrcrv-series-index/tree/v1.1.2)
- * Fix bug with selecting series containing apostropes in series title.
+ * Fix bug with selecting series containing apostrophes in series title.
 
 ### [Version 1.1.1](https://github.com/azurecurve/azrcrv-series-index/tree/v1.1.1)
  * Fix bug with incorrect language load text domain.
