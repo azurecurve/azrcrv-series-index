@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Series Index
  * Description: Displays Index of Series Posts using series-index Shortcode. This plugin is multi-site compatible, contains an inbuilt show/hide toggle and supports localisation..
- * Version: 1.1.3
+ * Version: 1.1.4
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/series-index
@@ -593,21 +593,21 @@ function azrcrv_si_get_allowed_tags() {
 			$title = esc_html__(sprintf('Click to show/hide the %s Series Index', $series_title), 'series-index');
 		}
 		
-		if (strlen($title) > 0){ $title = "title='".$title."'"; }
-		if (strlen($width) > 0){ $width = "width='".$width."'"; }
-		if (strlen($title_color) > 0){ $title_color = "title_color='".$title_color."'"; }
-		if (strlen($title_font) > 0){ $title_font = "title_font='".$title_font."'"; }
-		if (strlen($title_font_size) > 0){ $title_font_size = "title_font_size='".$title_font_size."'"; }
-		if (strlen($title_font_weight) > 0){ $title_font_weight = "title_font_weight='".$title_font_weight."'"; }
-		if (strlen($border) > 0){ $border = "border='".$border."'"; }
-		if (strlen($bgtitle) > 0){ $bgtitle = "bgtitle='".$bgtitle."'"; }
-		if (strlen($bgtext) > 0){ $bgtext = "bgtext='".$bgtext."'"; }
-		if (strlen($text_color) > 0){ $text_color = "text_color='".$text_color."'"; }
-		if (strlen($text_font) > 0){ $text_font = "text_font='".$text_font."'"; }
-		if (strlen($text_font_size) > 0){ $text_font_size = "text_font_size='".$text_font_size."'"; }
-		if (strlen($text_font_weight) > 0){ $text_font_weight = "text_font_weight='".$text_font_weight."'"; }
-		if (strlen($image_location) > 0){ $image_location = "image_location='".$image_location."'"; }
-		if (strlen($expand) > 0){ $expand = "expand='".$expand."'"; }
+		if (strlen($title) > 0){ $title = 'title="'.$title.'"'; }
+		if (strlen($width) > 0){ $width = 'width="'.$width.'"'; }
+		if (strlen($title_color) > 0){ $title_color = 'title_color="'.$title_color.'"'; }
+		if (strlen($title_font) > 0){ $title_font = 'title_font="'.$title_font.'"'; }
+		if (strlen($title_font_size) > 0){ $title_font_size = 'title_font_size="'.$title_font_size.'"'; }
+		if (strlen($title_font_weight) > 0){ $title_font_weight = 'title_font_weight="'.$title_font_weight.'"'; }
+		if (strlen($border) > 0){ $border = 'border="'.$border.'"'; }
+		if (strlen($bgtitle) > 0){ $bgtitle = 'bgtitle="'.$bgtitle.'"'; }
+		if (strlen($bgtext) > 0){ $bgtext = 'bgtext="'.$bgtext.'"'; }
+		if (strlen($text_color) > 0){ $text_color = 'text_color="'.$text_color.'"'; }
+		if (strlen($text_font) > 0){ $text_font = 'text_font="'.$text_font.'"'; }
+		if (strlen($text_font_size) > 0){ $text_font_size = 'text_font_size="'.$text_font_size.'"'; }
+		if (strlen($text_font_weight) > 0){ $text_font_weight = 'text_font_weight="'.$text_font_weight.'"'; }
+		if (strlen($image_location) > 0){ $image_location = 'image_location="'.$image_location.'"'; }
+		if (strlen($expand) > 0){ $expand = 'expand="'.$expand.'"'; }
 		
 		$output = do_shortcode("[toggle ".$title." ".$width." ".$title_color." ".$title_font." ".$title_font_size." ".$title_font_weight." ".$border." ".$bgtitle." ".$bgtext." ".$text_color." ".$text_font." ".$text_font_size." ".$text_font_weight." ".$image_location." ".$expand."]".$output."[/toggle]");
 	}else{
@@ -686,21 +686,21 @@ function azrcrv_si_display_index_of_series($atts, $content = null){
 			$title = esc_html__('Click to show/hide the Index of Series', 'series-index');
 		}
 		
-		if (strlen($title) > 0){ $title = "title='".$title."'"; }
-		if (strlen($width) > 0){ $width = "width='".$width."'"; }
-		if (strlen($title_color) > 0){ $title_color = "title_color='".$title_color."'"; }
-		if (strlen($title_font) > 0){ $title_font = "title_font='".$title_font."'"; }
-		if (strlen($title_font_size) > 0){ $title_font_size = "title_font_size='".$title_font_size."'"; }
-		if (strlen($title_font_weight) > 0){ $title_font_weight = "title_font_weight='".$title_font_weight."'"; }
-		if (strlen($border) > 0){ $border = "border='".$border."'"; }
-		if (strlen($bgtitle) > 0){ $bgtitle = "bgtitle='".$bgtitle."'"; }
-		if (strlen($bgtext) > 0){ $bgtext = "bgtext='".$bgtext."'"; }
-		if (strlen($text_color) > 0){ $text_color = "text_color='".$text_color."'"; }
-		if (strlen($text_font) > 0){ $text_font = "text_font='".$text_font."'"; }
-		if (strlen($text_font_size) > 0){ $text_font_size = "text_font_size='".$text_font_size."'"; }
-		if (strlen($text_font_weight) > 0){ $text_font_weight = "text_font_weight='".$text_font_weight."'"; }
-		if (strlen($image_location) > 0){ $image_location = "image_location='".$image_location."'"; }
-		if (strlen($expand) > 0){ $expand = "expand='".$expand."'"; }
+		if (strlen($title) > 0){ $title = 'title="'.$title.'"'; }
+		if (strlen($width) > 0){ $width = 'width="'.$width.'"'; }
+		if (strlen($title_color) > 0){ $title_color = 'title_color="'.$title_color.'"'; }
+		if (strlen($title_font) > 0){ $title_font = 'title_font="'.$title_font.'"'; }
+		if (strlen($title_font_size) > 0){ $title_font_size = 'title_font_size="'.$title_font_size.'"'; }
+		if (strlen($title_font_weight) > 0){ $title_font_weight = 'title_font_weight="'.$title_font_weight.'"'; }
+		if (strlen($border) > 0){ $border = 'border="'.$border.'"'; }
+		if (strlen($bgtitle) > 0){ $bgtitle = 'bgtitle="'.$bgtitle.'"'; }
+		if (strlen($bgtext) > 0){ $bgtext = 'bgtext="'.$bgtext.'"'; }
+		if (strlen($text_color) > 0){ $text_color = 'text_color="'.$text_color.'"'; }
+		if (strlen($text_font) > 0){ $text_font = 'text_font="'.$text_font.'"'; }
+		if (strlen($text_font_size) > 0){ $text_font_size = 'text_font_size="'.$text_font_size.'"'; }
+		if (strlen($text_font_weight) > 0){ $text_font_weight = 'text_font_weight="'.$text_font_weight.'"'; }
+		if (strlen($image_location) > 0){ $image_location = 'image_location="'.$image_location.'"'; }
+		if (strlen($expand) > 0){ $expand = 'expand="'.$expand.'"'; }
 		$output = do_shortcode("[toggle ".$title." ".$width." ".$title_color." ".$title_font." ".$title_font_size." ".$title_font_weight." ".$border." ".$bgtitle." ".$bgtext." ".$text_color." ".$text_font." ".$text_font_size." ".$text_font_weight." ".$image_location." ".$expand."]".$output."[/toggle]");
 	}else{
 		$output = str_replace('%s', esc_html($width), stripslashes($options['container_before'])).$header.$rows.stripslashes($options['container_after']);
