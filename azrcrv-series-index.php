@@ -3,10 +3,10 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Series Index
  * Description: Displays Index of Series Posts using series-index Shortcode. This plugin is multi-site compatible, contains an inbuilt show/hide toggle and supports localisation..
- * Version: 1.1.4
+ * Version: 1.1.5
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
- * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/series-index
+ * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/series-index/
  * Text Domain: series-index
  * Domain Path: /languages
  * ------------------------------------------------------------------------------
@@ -205,7 +205,7 @@ function azrcrv_si_add_plugin_action_link($links, $file){
 	}
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-si">'.esc_html__('Settings' ,'series-index').'</a>';
+		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-si"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'series-index').'</a>';
 		array_unshift($links, $settings_link);
 	}
 
