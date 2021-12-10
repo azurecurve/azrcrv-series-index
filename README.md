@@ -13,8 +13,6 @@ Shortcode `[series-index-link]` can be used in a post a link back to the series 
 
 This plugin is multisite compatible; each site will need settings to be configured in the admin dashboard.
 
-== Installation ==
-
 # Installation Instructions
 
  * Download the latest release of the plugin from [GitHub](https://github.com/azurecurve/azrcrv-series-index/releases/latest/).
