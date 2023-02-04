@@ -1,14 +1,15 @@
 === Series Index ===
 
 Description:	Displays index of posts in a series using the series-index shortcode.
-Version:		1.2.3
+Version:		1.2.4
 Tags:			Series,Posts,Index
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/series-index/
-Download link:	https://github.com/azurecurve/azrcrv-series-index/releases/download/v1.2.3/azrcrv-series-index.zip
+Download link:	https://github.com/azurecurve/azrcrv-series-index/releases/download/v1.2.4/azrcrv-series-index.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
+Requires CP:	1.0
 Requires:		1.0.0
 Tested:			4.9.99
 Text Domain:	series-index
@@ -55,6 +56,9 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # Changelog
 
+### [Version 1.2.4](https://github.com/azurecurve/azrcrv-series-index/releases/tag/v1.2.4)
+ * Update readme file for compatibility with ClassicPress Directory.
+ 
 ### [Version 1.2.3](https://github.com/azurecurve/azrcrv-series-index/releases/tag/v1.2.3)
  * Update readme files.
  * Update language template.
